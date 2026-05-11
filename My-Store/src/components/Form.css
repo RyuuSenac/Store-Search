@@ -1,0 +1,78 @@
+/* ─── Form Container ─────────────────────── */
+
+#form {
+  margin-bottom: 3rem;
+}
+
+.form__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+/* ─── Cada campo ─────────────────────────── */
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 180px;
+}
+
+.form__label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.form__input {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.875rem;
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.form__input:focus {
+  border-color: #888;
+}
+
+.form__input::placeholder {
+  color: #444;
+}
+
+/* ─── Botão ──────────────────────────────── */
+
+.form__button {
+  background-color: #f0f0f0;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.15s, transform 0.1s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+.form__button:hover {
+  background-color: #d4d4d4;
+}
+
+.form__button:active {
+  transform: scale(0.97);
+}

@@ -1,0 +1,105 @@
+/* ─── Grid ───────────────────────────────── */
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ─── Wrapper externo de cada jogo ───────── */
+
+.games > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Link do título ─────────────────────── */
+
+.card__title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 0 0 0.5rem;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 0;
+  transition: color 0.15s;
+}
+
+.card__title:hover {
+  color: #aaa;
+}
+
+/* ─── Card ───────────────────────────────── */
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #444;
+}
+
+/* ─── Imagem ─────────────────────────────── */
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(30%);
+  transition: filter 0.25s;
+}
+
+.card:hover .card__img {
+  filter: grayscale(0%);
+}
+
+/* ─── Descrição ──────────────────────────── */
+
+.card__description {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: #888;
+  padding: 0.875rem 0.875rem 0;
+  flex: 1;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Botão remover ──────────────────────── */
+
+.card__remove {
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  color: #555;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.65rem 0.875rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  transition: color 0.15s, background-color 0.15s;
+  margin-top: 0.875rem;
+}
+
+.card__remove:hover {
+  color: #f0f0f0;
+  background-color: #222;
+}
